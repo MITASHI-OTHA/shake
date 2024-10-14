@@ -29,7 +29,15 @@
     },
     "plugins": [
       "expo-router",
-      "expo-font"
+      "expo-font",
+      [
+        "react-native-ble-plx",
+        {
+          "isBackgroundEnabled": true,
+          "modes": ["peripheral", "central"],
+          "bluetoothAlwaysPermission": "Autoriser $(PRODUCT_NAME) à se connecter aux appareils Bluetooth"
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true

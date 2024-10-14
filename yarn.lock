@@ -1299,7 +1299,7 @@
     node-forge "^1.2.1"
     nullthrows "^1.1.1"
 
-"@expo/config-plugins@~8.0.0-beta.0", "@expo/config-plugins@~8.0.8", "@expo/config-plugins@8.0.10":
+"@expo/config-plugins@^7.2.5 || ^8.0.0", "@expo/config-plugins@~8.0.0-beta.0", "@expo/config-plugins@~8.0.8", "@expo/config-plugins@8.0.10":
   version "8.0.10"
   resolved "https://registry.npmjs.org/@expo/config-plugins/-/config-plugins-8.0.10.tgz"
   integrity sha512-KG1fnSKRmsudPU9BWkl59PyE0byrE2HTnqbOrgwr2FAhqh7tfr9nRs6A9oLS/ntpGzmFxccTEcsV0L4apsuxxg==
@@ -4262,6 +4262,13 @@ expo-dev-menu@5.0.22:
     expo-dev-menu-interface "1.8.3"
     semver "^7.5.4"
 
+expo-device@~6.0.2:
+  version "6.0.2"
+  resolved "https://registry.npmjs.org/expo-device/-/expo-device-6.0.2.tgz"
+  integrity sha512-sCt91CuTmAuMXX4SlFOn4lIos2UIr8vb0jDstDDZXys6kErcj0uynC7bQAMreU5uRUTKMAl4MAMpKt9ufCXPBw==
+  dependencies:
+    ua-parser-js "^0.7.33"
+
 expo-file-system@~17.0.1:
   version "17.0.1"
   resolved "https://registry.npmjs.org/expo-file-system/-/expo-file-system-17.0.1.tgz"
@@ -4372,7 +4379,7 @@ expo-web-browser@~13.0.3:
   resolved "https://registry.npmjs.org/expo-web-browser/-/expo-web-browser-13.0.3.tgz"
   integrity sha512-HXb7y82ApVJtqk8tManyudtTrCtx8xcUnVzmJECeHCB0SsWSQ+penVLZxJkcyATWoJOsFMnfVSVdrTcpKKGszQ==
 
-expo@*, expo@~51.0.37:
+expo@*, expo@^51.0.14, expo@~51.0.37:
   version "51.0.37"
   resolved "https://registry.npmjs.org/expo/-/expo-51.0.37.tgz"
   integrity sha512-zMdfTiGNgNWG0HOOFA3zRreS94iQ7fDxxgEIR6wdQCbncTpbeYj+5mscTAlHE9JJ+oBkcNyJXrLSjE/YVbFERg==
@@ -7287,6 +7294,14 @@ react-is@^18.2.0:
   resolved "https://registry.npmjs.org/react-is/-/react-is-18.3.1.tgz"
   integrity sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==
 
+react-native-ble-plx@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.npmjs.org/react-native-ble-plx/-/react-native-ble-plx-3.2.1.tgz"
+  integrity sha512-cot4pu6qXh7DLcYh91n4BNI5Wm9/oMUSDj24G1tQ86F8sCFJ292AneKxRHkTH2+VxIGQuU2FVvWY1iY6ob0KZQ==
+  dependencies:
+    "@expo/config-plugins" "^7.2.5 || ^8.0.0"
+    expo "^51.0.14"
+
 react-native-gesture-handler@~2.16.1:
   version "2.16.2"
   resolved "https://registry.npmjs.org/react-native-gesture-handler/-/react-native-gesture-handler-2.16.2.tgz"
@@ -8618,6 +8633,11 @@ typescript@^5.1.0, typescript@~5.3.3:
   version "5.3.3"
   resolved "https://registry.npmjs.org/typescript/-/typescript-5.3.3.tgz"
   integrity sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==
+
+ua-parser-js@^0.7.33:
+  version "0.7.39"
+  resolved "https://registry.npmjs.org/ua-parser-js/-/ua-parser-js-0.7.39.tgz"
+  integrity sha512-IZ6acm6RhQHNibSt7+c09hhvsKy9WUr4DVbeq9U8o71qxyYtJpQeDxQnMrVqnIFMLcQjHO0I9wgfO2vIahht4w==
 
 ua-parser-js@^1.0.35:
   version "1.0.39"

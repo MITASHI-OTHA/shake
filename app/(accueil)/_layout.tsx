@@ -1,16 +1,28 @@
-import { Text } from 'react-native';
-import { BottomNavigation } from 'react-native-paper';
+import { Text, View } from 'react-native';
+import { BottomNavigation, Button } from 'react-native-paper';
 import React from 'react';
 import Header from '@/components/Header';
 import { listIconsType } from '@/types';
 import { Icon } from '@iconify/react';
 import { MaterialIcons } from '@expo/vector-icons';
+import * as Device from 'expo-device';
+import { requestPermissions } from '@/hooks/useBLE';
 
 const TabLayout = () => {
   const [visible, setVisible] = React.useState(true);
-
+  const scanForDevices = async () => {
+    const isPermissionsEnabled = await requestPermissions();
+    if (isPermissionsEnabled) {
+      //scanForPeripherals();
+    }
+  };
   const MusicRoute = () => <Text>Musique</Text>;
-  const AlbumsRoute = () => <Text>Albums</Text>;
+  const AlbumsRoute = () => <View>
+    <Text>** { Device.platformApiLevel } **</Text> 
+    <Button style={{ width: 200, marginTop: 200 }} icon="camera" mode="contained" onPress={() => scanForDevices()}>
+      Press me
+  </Button>
+  </View>;
   const partagesRoute = () => <Text>Partages</Text>;
 
   const [index, setIndex] = React.useState(0);
@@ -25,6 +37,7 @@ const TabLayout = () => {
     shake: AlbumsRoute,
     partages: partagesRoute,
   });
+
 
   const renderIcon = ({ route, focused }: {route: {key: string}, focused: boolean}) => {
     switch (route.key) {
@@ -58,3 +71,4 @@ const TabLayout = () => {
 };
 
 export default TabLayout;
+
